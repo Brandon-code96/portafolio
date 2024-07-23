@@ -6,7 +6,7 @@ import Icon from './Icon';
 function NavBar() {
 
   const description = {
-    personal: 'Personal',
+    personal: 'Portafolio',
     about: 'Acerca de mi',
     skills: 'Habilidades',
     contact: 'Contáctame',
@@ -17,7 +17,7 @@ function NavBar() {
   const lastIndex = keys.length - 1;
 
   return (
-    <ul className='nav d-flex justify-content-around m-4'>
+    <ul className='nav d-flex justify-content-around m-4 pb-4'>
       {keys.map((key, index) => (
         <li className={`nav-item ${index === 0 ? 'me-auto' : ''} ${index === lastIndex ? 'ms-auto': ''}`} key={key}>
           {index === 0 || index === lastIndex ? (
