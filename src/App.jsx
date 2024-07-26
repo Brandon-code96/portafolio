@@ -1,5 +1,7 @@
+import AboutMe from "./components/AboutMe";
 import NavBar from "./components/NavBar";
 import Section from "./components/Section";
+import Skills from "./components/Skills";
 
 function App() {
 
@@ -7,6 +9,8 @@ function App() {
     <>
       <NavBar />
       <Section />
+      <Skills />
+      <AboutMe />
    </>
   )
 }

@@ -11,7 +11,7 @@ Icon.propTypes = {
     icon: PropTypes.object.isRequired,
     url: PropTypes.string,
     size: PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.string
 };
 
 
