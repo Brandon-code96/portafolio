@@ -1,4 +1,4 @@
-import { faHtml5, faCss3, faJs, faBootstrap, faReact, faJava, faGit, } from "@fortawesome/free-brands-svg-icons";
+import { faHtml5, faCss3, faJs, faBootstrap, faReact, faJava, faGit, faNodeJs} from "@fortawesome/free-brands-svg-icons";
 
 import Icon from "./Icon"
 
@@ -12,6 +12,7 @@ const Skills = () => {
     react : <Icon icon={faReact} size='4x' />,
     java : <Icon icon={faJava} size='4x' />,
     git : <Icon icon={faGit} size='4x' />,
+    nodeJs : <Icon icon={faNodeJs} size='4x' />
   }
 
   return (
