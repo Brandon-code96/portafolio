@@ -1,4 +1,6 @@
 import AboutMe from "./components/AboutMe";
+import Footer from "./components/Footer";
+import Form from "./components/Form";
 import NavBar from "./components/NavBar";
 import Proyects from "./components/Proyects";
 import Section from "./components/Section";
@@ -13,6 +15,8 @@ function App() {
       <Skills />
       <AboutMe />
       <Proyects />
+      <Form />
+      <Footer />
    </>
   )
 }
