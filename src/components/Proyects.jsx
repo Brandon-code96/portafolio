@@ -1,5 +1,5 @@
 import { faLink } from "@fortawesome/free-solid-svg-icons"
-import Icon from "./Icon"
+import Icon from "./icons/Icon"
 
 const projects = [
   {

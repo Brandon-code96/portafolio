@@ -1,16 +1,9 @@
-import { faFacebook, faLinkedin, faDiscord, faGithub} from "@fortawesome/free-brands-svg-icons";
-import Icon from "./Icon"
 import Image from '../assets/images/programando.jpg'
+import Icon from './icons/Icon';
+import { socialLinks } from './icons/socialLinks';
 
-const Section = () => {
-
-  const socialLinks = {
-    linkedin: <Icon icon={faLinkedin} url={'https://www.linkedin.com'}/>,
-    facebook: <Icon icon={faFacebook}/>,
-    discord: <Icon icon={faDiscord}/>,
-    gitHub: <Icon icon={faGithub}/>
-  }
-  const keys = Object.keys(socialLinks);
+function Section() {
+  const linkKeys = Object.keys(socialLinks);
 
   return (
     <main className="container d-flex align-items-center pt-4">
@@ -24,10 +17,13 @@ const Section = () => {
           </p>
         </div>
         <div className="mt-4 d-flex">
-          {keys.map((key) => (
-            <a key={key} href={socialLinks[key].props.url || '#'} 
-            className="text-dark border border-dark p-2 me-4 rounded"> 
-              {socialLinks[key]} 
+          {linkKeys.map((key) => (
+            <a 
+              key={key} 
+              href={socialLinks[key].url}
+              target='_blank' 
+              className="text-dark border border-dark p-2 me-4 rounded"> 
+              <Icon icon={socialLinks[key].icon}/> 
             </a>
           ))}
         </div>
@@ -35,8 +31,6 @@ const Section = () => {
       <img src={Image} alt="Hombre programando" className="rounded-circle w-50"/>
     </main>
   )
-
-  
 }
 
 export default Section

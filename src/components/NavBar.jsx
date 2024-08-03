@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { faBriefcase, faDownload } from '@fortawesome/free-solid-svg-icons';
-import Icon from './Icon';
+import Icon from './icons/Icon';
 
 
 function NavBar() {

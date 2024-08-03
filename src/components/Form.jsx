@@ -1,16 +1,8 @@
-import { faFacebook, faLinkedin, faDiscord, faGithub} from "@fortawesome/free-brands-svg-icons";
-import Icon from "./Icon"
-
-const socialLinks = {
-  linkedin: <Icon icon={faLinkedin} url={'https://www.linkedin.com'}/>,
-  facebook: <Icon icon={faFacebook}/>,
-  discord: <Icon icon={faDiscord}/>,
-  gitHub: <Icon icon={faGithub}/>
-}
-const keys = Object.keys(socialLinks);
-
+import Icon from "./icons/Icon";
+import { socialLinks } from "./icons/socialLinks";
 
 function Form() {
+  const socialKeys = Object.keys(socialLinks);
   return (
     <section id="contact" className="contact my-5">
       <div className="container w-75">
@@ -32,10 +24,10 @@ function Form() {
             <div className="d-flex justify-content-between">
               <button type="submit" className="btn btn-dark">Contáctame</button>
            
-              {keys.map((key) => (
-                <a key={key} href={socialLinks[key].props.url || '#'} 
+              {socialKeys.map((key) => (
+                <a key={key} href={socialLinks[key].url} 
                 className="text-dark border border-dark p-2 rounded"> 
-                  {socialLinks[key]} 
+                  <Icon icon={socialLinks[key].icon}/>
                 </a>
               ))}
         
