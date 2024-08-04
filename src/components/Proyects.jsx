@@ -28,11 +28,11 @@ function Proyects() {
       <h3 className="text-center text-light py-4">Mis <span className="myName"> Proyectos </span></h3>
 
       {projects.map((project, index) => (
-        <div className={`d-flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} my-4 w-75 mx-auto`} key={index}>
-          <div className= {`col d-flex ${index % 2 === 0 ? 'justify-content-start' : 'justify-content-end'}`}>
-            <img src={project.image} alt={`proyecto${project.number}`} className="rounded w-50"/>
+        <div className={`d-flex flex-column flex-md-row ${index % 2 === 0 ? 'flex-md-row' : 'flex-md-row-reverse'} my-4 w-75 mx-auto`} key={index}>
+          <div className= {`col-12 col-md-6 d-flex ${index % 2 === 0 ? 'justify-content-md-start' : 'justify-content-md-end'} mb-3 mb-md-0`}>
+            <img src={project.image} alt={`proyecto${project.number}`} className="rounded w-50 m-auto m-md-0"/>
           </div>
-          <div className="col d-flex flex-column justify-content-around">
+          <div className="col-12 col-md-6 d-flex flex-column justify-content-around">
             <h4 className="text-light">{project.number}</h4>
             <h4 className="text-light">{project.title}</h4>
             <p className="text-light">{project.description}</p>

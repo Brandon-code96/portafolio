@@ -6,7 +6,7 @@ function Section() {
   const linkKeys = Object.keys(socialLinks);
 
   return (
-    <main className="container d-flex align-items-center pt-4">
+    <main className="container d-flex align-items-center pt-4 flex-column-reverse flex-md-row">
       <section className="section">
         <div className="d-flex flex-column">
           <h3 className=" lh-lg">Hola soy <span className="myName">Brandon Ubillus Barraza</span> <br />
@@ -28,7 +28,7 @@ function Section() {
           ))}
         </div>
       </section>
-      <img src={Image} alt="Hombre programando" className="rounded-circle w-50"/>
+      <img src={Image} alt="Hombre programando" className="rounded-circle w-100 w-md-100 mt-4 mt-md-0"/>
     </main>
   )
 }

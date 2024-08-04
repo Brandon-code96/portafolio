@@ -6,7 +6,7 @@ function Form() {
   return (
     <section id="contact" className="contact my-5">
       <div className="container w-75">
-        <div className="d-flex align-items-center row-cols-3 gap-5">
+        <div className="d-flex flex-column flex-md-row align-items-center gap-45">
 
           <form action="forms/contact.php" method="post" role="form" className="php-email-form mt-5">
             <div className="form-group mb-3">
@@ -22,11 +22,11 @@ function Form() {
               <textarea className="form-control border border-dark" name="message" rows="3" placeholder="Mensaje"></textarea>
             </div>
             <div className="d-flex justify-content-between">
-              <button type="submit" className="btn btn-dark">Contáctame</button>
+              <button type="submit" className="btn btn-dark me-3">Contáctame</button>
            
               {socialKeys.map((key) => (
                 <a key={key} href={socialLinks[key].url} 
-                className="text-dark border border-dark p-2 rounded"> 
+                className="text-dark border border-dark p-2 m-1 rounded"> 
                   <Icon icon={socialLinks[key].icon}/>
                 </a>
               ))}
@@ -34,7 +34,7 @@ function Form() {
             </div>
           </form>
 
-          <div className="container mt-5">
+          <div className="container mt-5 col-12 col-md-6">
             <h3 className="myName"> Hablemos <span className="myOficio"> para </span> algo especial </h3>
             <p className="lh-base">Si tienes alguna duda o quieres trabajar conmigo, no dudes en contactarme.</p>
             <p className="fw-bold"> brandonubillusbarraza@gmail.com </p>

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 import Icon from "./icons/Icon"
@@ -16,7 +17,7 @@ function Skills() {
         {skillKeys.map((key)=> (
           <div 
             key={key} 
-            className="text-light col-auto d-flex flex-column align-items-center m-4"
+            className="text-light col-5 col-sm-3 col-md-2 col-lg-1 d-flex flex-column align-items-center"
             onMouseEnter={()=> setHoveredSkill(key)}
             onMouseLeave={()=> setHoveredSkill(null)}
           >
@@ -26,7 +27,7 @@ function Skills() {
               color={mySkills[key].color}
               beat={hoveredSkill === key}
             />
-            <p style={{color: mySkills[key].color}} >
+            <p className="mt-2" style={{color: mySkills[key].color}} >
               {key.charAt(0).toUpperCase() + key.slice(1)}
             </p>
           </div>
