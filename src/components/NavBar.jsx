@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { faBriefcase, faDownload, faBars } from '@fortawesome/free-solid-svg-icons';
 import Icon from './icons/Icon';
 import { useState } from 'react';
+import  html2pdf from 'html2pdf.js';
 
 function NavBar() {
   const description = {
@@ -20,6 +21,18 @@ function NavBar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  }
+
+  const downloadPDF = () => {
+    const element = document.body;
+    const opt = {
+      margin: 0.5,
+      filename: 'Brandon_Ubillus_CV.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { windowWidth: 375, windowHeight: 667 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(opt).save();
   }
 
   return (
@@ -44,7 +57,7 @@ function NavBar() {
             ))}
           </ul>
           <div className={isMenuOpen ? 'd-flex justify-content-center ' : ''}>
-            <button className='text-light bg-dark rounded' type='button'>
+            <button className='text-light bg-dark rounded' type='button' onClick={downloadPDF}>
               {description[keys[lastIndex]]}
               <Icon icon={faDownload} alt='logo'/>
             </button>
