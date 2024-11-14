@@ -14,7 +14,7 @@ function NavBar() {
   const description = {
     personal: 'Portafolio',
     about: 'Acerca de mi',
-    skills: 'Habilidades',
+    projects: 'Proyectos',
     contact: 'Contáctame',
     download: 'Descarga',
   };
@@ -58,7 +58,7 @@ function NavBar() {
           <ul className='navbar-nav m-auto d-flex justify-content-center align-items-center'>
             {keys.slice(1, lastIndex).map((key) => (
               <li className='nav-item' key={key}>
-                <a className='nav-link text-dark d-flex align-items-center' href={`/${key}`}>
+                <a className='nav-link text-dark d-flex align-items-center' href={`#${key}`}>
                   {description[key]}
                 </a>
               </li>

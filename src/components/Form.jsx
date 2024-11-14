@@ -27,7 +27,8 @@ function Form() {
     e.preventDefault();
     try {
       // Envía el formulario al servidor con axios
-      const response = await axios.post('http://localhost:3001/send', formData);
+      // http://localhost:3001/send
+      const response = await axios.post('https://brandonub-dev.up.railway.app/send', formData);
       alert(response.data);
     } catch (error) {
       alert('Error al enviar el correo');
